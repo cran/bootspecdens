@@ -17,8 +17,8 @@ specdens(data, h, B, level)
 \arguments{
   \item{data}{Data is a mxn matrix. In each row the data of one time series considered, i.e. m=number of time series and n=number of observation.}
   \item{h}{A single number which represents the kernel bandwidth smoothing parameter.}
-  \item{B}{The number of Bootstrap replicates. This will be a single positive integer. Normally something like 1000 is used.}
-  \item{level}{A single number in [0,1] represents the level of the test. Normaly 0.05 is used.}
+  \item{B}{The number of bootstrap replicates. This will be a single positive integer. Normally something like 1000 is used.}
+  \item{level}{A single number in (0,1) represents the level of the test. Normally 0.05 is used.}
 }
 \details{
 }
@@ -30,7 +30,9 @@ densities respectively "not equal spectral densities" for different spectral den
 \examples{
 data(Nile)
 data(WWWusage)
-data<- matrix(c(Nile[1:20],WWWusage[1:20]), nrow=2, byrow=TRUE) #creates the data matrix with the first 20 values of the time series Nile and WWWusage
+data<- matrix(c(Nile[1:20],WWWusage[1:20]), nrow=2, byrow=TRUE) #creates the data matrix with 
+										    #the first 20 values of the 
+										    #time series Nile and WWWusage
 specdens(data, 0.2, 100, 0.05)
 }
 \keyword{ ts }
