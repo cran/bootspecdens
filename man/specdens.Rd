@@ -20,11 +20,10 @@ specdens(data, h, B, level)
   \item{B}{The number of bootstrap replicates. This will be a single positive integer. Normally something like 1000 is used.}
   \item{level}{A single number in (0,1) represents the level of the test. Normally 0.05 is used.}
 }
-\details{
-}
 \value{
   The value returned is "equal spectral densities" for equal spectral 
-densities respectively "not equal spectral densities" for different spectral densities.}
+densities respectively "not equal spectral densities" for different spectral densities. 
+Furthermore the p-value is given.}
 \references{Dette, H. and Paparoditis ,E. (2007) \emph{Testing Equality Of Spectral Densities}.}
 \author{Tatjana Kinsvater \email{tatjana.kinsvater@rub.de}}
 \examples{

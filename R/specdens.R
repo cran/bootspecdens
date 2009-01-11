@@ -109,6 +109,7 @@ for(j in 1:m){
 p<- p+(g_rs(r1,i)*g_rs(r2,j)*kappaHatsq_s1s2(i,j,lambda))
 }
 }
+p
 }
 #
 g=0
@@ -179,12 +180,14 @@ g=0
 for(i in 1:m){
 g<- g+g_rs(r,s1)*g_rs(r,i)*z(s1,i)
 }
+g
 }
 #
 g=0
 for(i in 1:m){
 g<- g+zz(r,i)
 }
+g
 }
 #
 ggg<- ggg+zzz(i)
@@ -328,5 +331,15 @@ bootsample[b]<- Zstar_n
 q.oben<- quantile(Re(bootsample), 1-level)
 
 ifelse(Re((N*sqrt(h)*T_n-my_n)/sqrt(tau0Hatsq)) >= Re(q.oben), print("not equal spectral densities"), print("equal spectral desnities"))
+
+pzaehler=0
+
+for(i in 1:B){
+	ifelse(Re((N*sqrt(h)*T_n-my_n)/sqrt(tau0Hatsq))>= Re(bootsample[i]), pzaehler<- pzaehler, pzaehler<- pzaehler+1)
+	}
+
+pvalue <- pzaehler/B
+print("p-value:")
+print(pvalue)
 }
 

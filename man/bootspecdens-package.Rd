@@ -34,7 +34,4 @@ Dette,H. and Paparoditis,E. (2007) \emph{Testing Equality Of Spectral Densities}
 \keyword{package}
 \keyword{ts}
 
-\seealso{
-\code{\link[<boot>:<boot>-package]{<boot>}}
-}
 
